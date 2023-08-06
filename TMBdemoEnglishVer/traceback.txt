@@ -1,0 +1,29 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While parsing D:\Tencent\1152536486\FileRecv\奇迹之蝶试玩版/game/trial.rpy.
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xa1 in position 4034: invalid start byte
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 447, in main
+    renpy.game.script.load_script() # sets renpy.game.script.
+  File "renpy/script.py", line 283, in load_script
+    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
+  File "renpy/script.py", line 769, in load_appropriate_file
+    data, stmts = self.load_file(dir, fn + source)
+  File "renpy/script.py", line 594, in load_file
+    stmts = renpy.parser.parse(fullfn)
+  File "renpy/parser.py", line 2953, in parse
+    lines = list_logical_lines(fn, filedata, linenumber)
+  File "renpy/parser.py", line 240, in list_logical_lines
+    data = f.read().decode("utf-8", "python_strict")
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/encodings/utf_8.py", line 16, in decode
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xa1 in position 4034: invalid start byte
+
+Windows-10-10.0.22621
+Ren'Py 7.4.8.1895
+TMBdemo 1.0
+Sun Jul 30 15:06:56 2023
